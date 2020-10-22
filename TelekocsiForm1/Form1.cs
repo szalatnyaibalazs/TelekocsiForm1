@@ -104,6 +104,63 @@ namespace TelekocsiForm1
 
 
             btnFourth.Enabled = false;
+            btnFifth.Enabled = true;
+        }
+
+        private void btnFifth_Click(object sender, EventArgs e)
+        {
+            lbKimenet.Items.Clear();
+            lbKimenet.Items.Add("5.feladat");
+            foreach (var i in igenyek)
+            {
+                int x = i.VanAuto(autok);
+                if (x > -1)
+                {
+                    lbKimenet.Items.Add($"{i.Azonosito} => {autok[x].Rendszam}");
+                }
+            }
+            btnFifth.Enabled = false;
+            btnSixth.Enabled = true;
+        }
+
+        private void btnSixth_Click(object sender, EventArgs e)
+        {
+            lbKimenet.Items.Clear();
+            lbKimenet.Items.Add("6.feladat");
+            try
+            {
+                StreamWriter file = new StreamWriter("utasuzenetek.txt");
+                foreach (var i in igenyek)
+                {
+                    int x = i.VanAuto(autok);
+                    if (x > -1)
+                    {
+                        file.WriteLine($"{i.Azonosito}: Rendszám: {autok[x].Rendszam}, Telefonszám: {autok[x].Telefonszam}");
+                    }
+                    else
+                    {
+                        file.WriteLine($"{i.Azonosito}: Sajnos nem sikerült autót találni");
+                    }
+                }
+
+                file.Close();
+                lbKimenet.Items.Add("Adatok fájlba írása megtörtént");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnKilepes_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

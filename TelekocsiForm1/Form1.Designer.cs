@@ -33,6 +33,10 @@
             this.lbKimenet = new System.Windows.Forms.ListBox();
             this.btnThird = new System.Windows.Forms.Button();
             this.btnFourth = new System.Windows.Forms.Button();
+            this.btnFifth = new System.Windows.Forms.Button();
+            this.btnSixth = new System.Windows.Forms.Button();
+            this.btnKilepes = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBeolvasas
@@ -59,9 +63,9 @@
             // lbKimenet
             // 
             this.lbKimenet.FormattingEnabled = true;
-            this.lbKimenet.Location = new System.Drawing.Point(242, 12);
+            this.lbKimenet.Location = new System.Drawing.Point(131, 51);
             this.lbKimenet.Name = "lbKimenet";
-            this.lbKimenet.Size = new System.Drawing.Size(330, 316);
+            this.lbKimenet.Size = new System.Drawing.Size(330, 277);
             this.lbKimenet.TabIndex = 2;
             this.lbKimenet.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -87,11 +91,57 @@
             this.btnFourth.UseVisualStyleBackColor = true;
             this.btnFourth.Click += new System.EventHandler(this.btnFourth_Click);
             // 
+            // btnFifth
+            // 
+            this.btnFifth.Enabled = false;
+            this.btnFifth.Location = new System.Drawing.Point(12, 128);
+            this.btnFifth.Name = "btnFifth";
+            this.btnFifth.Size = new System.Drawing.Size(75, 23);
+            this.btnFifth.TabIndex = 5;
+            this.btnFifth.Text = "5.feladat";
+            this.btnFifth.UseVisualStyleBackColor = true;
+            this.btnFifth.Click += new System.EventHandler(this.btnFifth_Click);
+            // 
+            // btnSixth
+            // 
+            this.btnSixth.Enabled = false;
+            this.btnSixth.Location = new System.Drawing.Point(12, 157);
+            this.btnSixth.Name = "btnSixth";
+            this.btnSixth.Size = new System.Drawing.Size(75, 23);
+            this.btnSixth.TabIndex = 6;
+            this.btnSixth.Text = "6.feladat";
+            this.btnSixth.UseVisualStyleBackColor = true;
+            this.btnSixth.Click += new System.EventHandler(this.btnSixth_Click);
+            // 
+            // btnKilepes
+            // 
+            this.btnKilepes.Location = new System.Drawing.Point(497, 334);
+            this.btnKilepes.Name = "btnKilepes";
+            this.btnKilepes.Size = new System.Drawing.Size(75, 23);
+            this.btnKilepes.TabIndex = 7;
+            this.btnKilepes.Text = "Kilépés";
+            this.btnKilepes.UseVisualStyleBackColor = true;
+            this.btnKilepes.Click += new System.EventHandler(this.btnKilepes_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(128, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "A feladatok kimenetele";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmFo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnKilepes);
+            this.Controls.Add(this.btnSixth);
+            this.Controls.Add(this.btnFifth);
             this.Controls.Add(this.btnFourth);
             this.Controls.Add(this.btnThird);
             this.Controls.Add(this.lbKimenet);
@@ -100,6 +150,7 @@
             this.Name = "frmFo";
             this.Text = "Telekocsi";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,6 +161,10 @@
         private System.Windows.Forms.ListBox lbKimenet;
         private System.Windows.Forms.Button btnThird;
         private System.Windows.Forms.Button btnFourth;
+        private System.Windows.Forms.Button btnFifth;
+        private System.Windows.Forms.Button btnSixth;
+        private System.Windows.Forms.Button btnKilepes;
+        private System.Windows.Forms.Label label1;
     }
 }
 
